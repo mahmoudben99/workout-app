@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Workout App</h1>
+    <div id="day-selector">
+      <button onclick="startWorkout('Monday')">Monday</button>
+      <button onclick="startWorkout('Tuesday')">Tuesday</button>
+      <button onclick="startWorkout('Wednesday')">Wednesday</button>
+      <button onclick="startWorkout('Thursday')">Thursday</button>
+      <button onclick="startWorkout('Friday')">Friday</button>
+      <button onclick="startWorkout('Saturday')">Saturday</button>
+      <button onclick="startWorkout('Sunday')">Sunday</button>
+    </div>
+    <div id="workout-display" style="display:none;">
+      <h2 id="workout-name"></h2>
+      <div id="exercise-details">
+        <p id="exercise-description"></p>
+        <p id="exercise-tips"></p>
+      </div>
+      <div id="timer" style="display:none;">
+        <p>Time Remaining: <span id="time-remaining">0</span> seconds</p>
+      </div>
+      <div id="reps" style="display:none;">
+        <p>Reps: <span id="reps-count">0</span></p>
+      </div>
+      <button id="exit-button" onclick="exitWorkout()">Exit</button>
+      <button id="pause-button" onclick="pauseTimer()">Pause</button>
+      <button id="resume-button" onclick="resumeTimer()" style="display:none;">Resume</button>
+      <button id="previous-button" onclick="previousStep()">Previous</button>
+      <button id="next-button" onclick="nextStep()">Next</button>
+      <ul id="progress-list"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
